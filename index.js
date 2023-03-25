@@ -1,7 +1,7 @@
-let millisecond = 00
-let seconds = 00
-let minutes = 00              //Variaveis que guardam os tempos em função de milisegundos || Variables that store times in milliseconds
-let hours = 00    
+let millisecond = 0
+let seconds = 0
+let minutes = 0          //Variaveis que guardam os tempos em função de milisegundos || Variables that store times in milliseconds
+let hours = 0
 
 let cron
 
@@ -21,9 +21,9 @@ function pause() {
 }
 
 function reset() {  // Função do botão 'reset', que serve para resetar a contagem || Function of the 'reset' button, which is used to reset the count
-    seconds = 00
-    hours = 00
-    minutes = 00
+    seconds = 0
+    hours = 0
+    minutes = 0
     
     document.getElementById("seconds").innerText = '00'
     document.getElementById("minutes").innerText = '00'
@@ -36,17 +36,17 @@ function timer () {
 
 
     if ((millisecond += 10) == 1000) {
-        millisecond = 00
+        millisecond = 0
         seconds++
     }
 
     if (seconds == 60) {
-        seconds = 00
+        seconds = 0
         minutes++
     }
 
     if (minutes == 60) {
-        minutes = 00
+        minutes = 0
         hours++
     }
 
