@@ -12,15 +12,17 @@ document.getElementById('reset').onclick = () => reset();
 
 
 function start() {
+    // Função do botão 'start', que serve para iniciar o cronômetro || Function of the 'start' button, which is used to start the stopwatch
     pause()
     cron = setInterval(() => {timer(); }, 10)
 }
 
 function pause() {
+    // Função do botão 'pause', que serve para pausar o cronômetro || Function of the 'pause' button, which serves to pause the stopwatch
     clearInterval(cron)
 }
 
-function reset() {  // Função do botão 'reset', que serve para resetar a contagem || Function of the 'reset' button, which is used to reset the count
+function reset() {  // Função do botão 'reset', que serve para resetar o cronômetro || Function of the 'reset' button, which is used to reset the stopwatch
     seconds = 0
     hours = 0
     minutes = 0
@@ -56,5 +58,6 @@ function timer () {
 }
 
 function returnData(input) {
+    // Função para formatação dos segundos, minutos e horas. || Function for formatting seconds, minutes and hours.
     return input >= 10 ? input : `0${input}`
 }
